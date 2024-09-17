@@ -30,7 +30,8 @@ public class AlgAnalysis {
 	 */
 	public static void arraySortRuntime(int count, int maxSize){
 		// add your code here (part 1)
-		
+
+
 	}
 	
 	/**
@@ -39,9 +40,16 @@ public class AlgAnalysis {
 	 * @param  n size of array
 	 * @return time taken in nano seconds
 	 */
+	
 	public static long unique1Runtime(int n){
 		// add your code here (part 2)
-		return 0;
+		int[] inputArray = genArray(n);
+		int[] randomArray = randomizeArray(inputArray);
+		long startTime = System.nanoTime();
+		Unique1.unique1(randomArray);
+		long endTime = System.nanoTime();
+		return endTime - startTime;
+
 	}
 	
 	/**
@@ -52,7 +60,12 @@ public class AlgAnalysis {
 	 */
 	public static long unique2Runtime(int n){
 		// add your code here (part 2)
-		return 0;
+		int[] inputArray = genArray(n);
+		int[] randomArray = randomizeArray(inputArray);
+		long startTime = System.nanoTime();
+		Unique2.unique2(randomArray);
+		long endTime = System.nanoTime();
+		return endTime - startTime;
 	}
 	
 	/**
