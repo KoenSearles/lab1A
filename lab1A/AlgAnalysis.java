@@ -17,6 +17,7 @@
 // Revision 1.0  2015/09/14 01:20:40  lplant
 // Revision 1.1  2015/09/19 11:21:00  Lucia Moura
 // ==========================================================================
+import java.lang.reflect.Array;
 import java.util.*;
 public class AlgAnalysis {
 
@@ -30,7 +31,22 @@ public class AlgAnalysis {
 	 */
 	public static void arraySortRuntime(int count, int maxSize){
 		// add your code here (part 1)
-		
+		for (int i = 0; i < count; i++) {
+			int arrSize = (maxSize / count) * (i+1);
+			int[] currArr = genArray(arrSize);
+			currArr = randomizeArray(currArr);
+
+			long startTime = System.nanoTime();
+
+			Arrays.sort(currArr);
+
+			long endTime = System.nanoTime();
+
+			long totalTime = endTime - startTime;
+
+			System.out.println("N: " + arrSize + ", T(n): "  + totalTime + " nanosecs, T(n)/(n*n): " + totalTime/(float)(arrSize*arrSize) + ", T(n)/(nlogn): " + totalTime/(arrSize * Math.log(arrSize)));
+		}
+
 	}
 	
 	/**
