@@ -31,9 +31,7 @@ public class AlgAnalysis {
 	 */
 	public static void arraySortRuntime(int count, int maxSize){
 		// add your code here (part 1)
-<<<<<<< HEAD
 
-=======
 		for (int i = 0; i < count; i++) {
 			int arrSize = (maxSize / count) * (i+1);
 			int[] currArr = genArray(arrSize);
@@ -49,7 +47,6 @@ public class AlgAnalysis {
 
 			System.out.println("N: " + arrSize + ", T(n): "  + totalTime + " nanosecs, T(n)/(n*n): " + totalTime/(float)(arrSize*arrSize) + ", T(n)/(nlogn): " + totalTime/(arrSize * Math.log(arrSize)));
 		}
->>>>>>> d2d72e760a3380b0a8925a398b8d55672c117af4
 
 	}
 	
